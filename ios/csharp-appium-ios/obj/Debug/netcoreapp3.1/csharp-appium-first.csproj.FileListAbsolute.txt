@@ -1,0 +1,55 @@
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.exe
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.deps.json
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.runtimeconfig.json
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.runtimeconfig.dev.json
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.pdb
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Appium.Net.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Castle.Core.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/SeleniumExtras.PageObjects.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/SeleniumExtras.WaitHelpers.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/nunit.framework.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/WebDriver.Support.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/WebDriver.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.AssemblyReference.cache
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.GeneratedMSBuildEditorConfig.editorconfig
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.AssemblyInfoInputs.cache
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.AssemblyInfo.cs
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.CoreCompileInputs.cache
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.CopyComplete
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.dll
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.pdb
+D:/csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.genruntimeconfig.cache
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.deps.json
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.runtimeconfig.json
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.runtimeconfig.dev.json
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/csharp-appium-first.pdb
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Appium.Net.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Castle.Core.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/SeleniumExtras.PageObjects.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/SeleniumExtras.WaitHelpers.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/nunit.framework.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/WebDriver.Support.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/WebDriver.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.AssemblyReference.cache
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.AssemblyInfoInputs.cache
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.AssemblyInfo.cs
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.CoreCompileInputs.cache
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.csproj.CopyComplete
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.dll
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.pdb
+/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/ios/csharp-appium-first/csharp-appium-first/obj/Debug/netcoreapp3.1/csharp-appium-first.genruntimeconfig.cache

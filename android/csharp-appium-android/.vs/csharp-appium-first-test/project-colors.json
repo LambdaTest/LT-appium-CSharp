@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c5350129-c7e9-45dc-91dc-5a35bd04dc2c": {
+      "ProjectGuid": "c5350129-c7e9-45dc-91dc-5a35bd04dc2c",
+      "DisplayName": "csharp-appium-first-test",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/android/csharp-appium-first-test/csharp-appium-first-test/csharp-appium-first-test.csproj": {}
+  },
+  "projects": {
+    "/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/android/csharp-appium-first-test/csharp-appium-first-test/csharp-appium-first-test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/android/csharp-appium-first-test/csharp-appium-first-test/csharp-appium-first-test.csproj",
+        "projectName": "csharp-appium-first-test",
+        "projectPath": "/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/android/csharp-appium-first-test/csharp-appium-first-test/csharp-appium-first-test.csproj",
+        "packagesPath": "/Users/shashankjangra/.nuget/packages/",
+        "outputPath": "/Users/shashankjangra/Desktop/Code/App Automation/CSharp - /csharp-appium-app-master/android/csharp-appium-first-test/csharp-appium-first-test/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shashankjangra/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Appium.WebDriver": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

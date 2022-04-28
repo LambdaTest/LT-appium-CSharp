@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\LenovoE14 Gen2\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\LenovoE14 Gen2\\.nuget\\packages"
+    ]
+  }
+}
