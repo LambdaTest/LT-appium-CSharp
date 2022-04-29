@@ -13,8 +13,6 @@ namespace csharp_appium_first
         {
             AppiumOptions caps = new AppiumOptions();
 
-
-            // Set your BrowserStack access credentials
             caps.AddAdditionalCapability("LT_USERNAME", "Your_Username"); //Enter the Username here
             caps.AddAdditionalCapability("LT_ACCESSKEY", "Your_AccessKey");  //Enter the Access key here
 
@@ -28,21 +26,13 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("isRealMobile", true);
             caps.AddAdditionalCapability("network", true);
 
-            // Specify the platformName
-            //caps.PlatformName = "iOS";
-
-            // Set other BrowserStack capabilities
             caps.AddAdditionalCapability("project", "First CSharp project");
             caps.AddAdditionalCapability("build", "CSharp iOS");
             caps.AddAdditionalCapability("name", "first_test");
 
-            // Initialize the remote Webdriver using LambdaTest remote URL
-            // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://beta-hub.lambdatest.com/wd/hub"), caps);
 
-            // Test case for the sample iOS app. 
-            // If you have uploaded your app, update the test case here.
             IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
             );
