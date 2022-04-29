@@ -1,4 +1,4 @@
-# csharp-appium
+# LT-appium-c#
 
 ### Prerequisites
 
