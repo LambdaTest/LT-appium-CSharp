@@ -33,7 +33,7 @@ namespace csharp_appium
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
-                new Uri("https://beta-hub.lambdatest.com/wd/hub"), caps);
+                new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
 
             // Test case for the sample iOS app. 
             // If you have uploaded your app, update the test case here.
