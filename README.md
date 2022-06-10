@@ -73,29 +73,10 @@ class Program
 
 ## Executing The Tests
 
-<Tabs className="docs__val">
-
-<TabItem value="ios" label="iOS" default>
-
-If you are using an **iOS** app, the cURL command will generate an app URL for the corresponding iOS app and install the same for running the tests. You can either use our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) or upload your own app as discussed earlier.
-
-Execute the following command to run your test on LambdaTest platform:
-
-```bash
-node android.js
-```
-
-</TabItem>
-
-<TabItem value="android" label="Android" default>
-
-If you are using an **android** app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or upload your own app as discussed earlier.
-
-## Executing The Tests
-
 Click the **Play** icon to run the test.
 
 </TabItem>
+If you are using an **android** app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or upload your own app as discussed earlier.
 
 </Tabs>
 
