@@ -30,6 +30,10 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("build", "CSharp iOS");
             caps.AddAdditionalCapability("name", "first_test");
 
+            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
+
+            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
+
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
 
@@ -53,35 +57,6 @@ namespace csharp_appium_first
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
             );
             nf.Click();
-
-            IOSElement gl = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
-            );
-            gl.Click();
-
-            Thread.Sleep(5000);
-
-            driver.Navigate().Back();
-
-            IOSElement st = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
-            );
-            st.Click();
-
-            Thread.Sleep(5000);
-
-            driver.Navigate().Back();
-
-            IOSElement browser = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Browser"))
-            );
-            browser.Click();
-
-            IOSElement inputBox = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("url"))
-            );
-            inputBox.Click();
-
 
             driver.Quit();
 

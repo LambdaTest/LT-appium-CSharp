@@ -1,175 +1,105 @@
-# C# With Appium ![pw](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+# How to install multiple apps in Real Devices on [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-multipleApps) using the Appium & C# Language
 
-<p align="center">
-<img height="500" src="https://user-images.githubusercontent.com/95698164/171856547-63a0496f-1034-40b2-98d0-3ef43eda5fb5.png">
-</p>
+While performing app automation testing with appium on LambdaTest Grid, you might face a scenario where the APP1 that you are testing needs to interact with a few other applications APP2, APP3. In this scenario, LambdaTest offers an easy way out where you can just [upload your apps](https://www.lambdatest.com/support/docs/appium-java/#upload-your-application) & add them to the multiple apps array.
+It becomes extremely convenient now where you can just add those URLs & run your tests with ease. 
 
-<p align="center">
-  <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp" target="_bank">Blog</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp" target="_bank">Docs</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp" target="_bank">Learning Hub</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp" target="_bank">Newsletter</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp" target="_bank">Certifications</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.youtube.com/c/LambdaTest" target="_bank">YouTube</a>
-</p>
-&emsp;
-&emsp;
-&emsp;
+# Steps:
 
-*Appium is a tool for automating native, mobile web, and hybrid applications on iOS, Android, and Windows platforms. It supports iOS native apps written in Objective-C or Swift and Android native apps written in Java or Kotlin. It also supports mobile web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome or the built-in 'Browser' app on Android). Perform Appium automation tests on [LambdaTest's online cloud](https://www.lambdatest.com/appium-mobile-testing).*
+You can add the app URLs fetched by [uploading your apps](https://www.lambdatest.com/support/docs/appium-java/#upload-your-application) in the ```otherApps``` capability.
 
-*Learn the basics of [Appium testing on the LambdaTest platform](https://www.lambdatest.com/support/docs/getting-started-with-appium-testing/).*
+Below is the ```Android``` example shown:
 
-[<img height="53" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
-
-## Table of Contents
-
-* [Pre-requisites](#pre-requisites)
-* [Run Your First Test](#run-your-first-test)
-* [Executing The Tests](#executing-the-tests)
-
-## Pre-requisites
-
-Before you can start performing App automation testing with Appium, you have to set up Visual Studio:
-
-<p align="center">
-<img height="500" src="https://user-images.githubusercontent.com/95698164/170299253-3166f596-3214-4c9f-88c4-885deb5966e7.png">
-</p>
-
-- Clone/Download the Github Repository.
-
-- Open the Android/iOS project using the file with a .sln extension.
-
-### Setting Up Your Authentication
-
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/).
-
-Set LambdaTest `Username` and `Access Key` in environment variables.
-
-**For Linux/macOS:**
-
-```js
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME" \
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-  
-**For Windows:**
+class Program
+    {
+        static void Main(string[] args)
+        {
+            AppiumOptions caps = new AppiumOptions();
+ 
+            caps.AddAdditionalCapability("LT_USERNAME", "LT_USERNAME");  //Add the LT Username
+            caps.AddAdditionalCapability("LT_ACCESS_KEY", "LT_ACCESS_KEY");  //Add the LT Access key
 
-```js
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME" `
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-```
+            // Set URL of the application under test
+            caps.AddAdditionalCapability("app", "App_ID"); //Add the App ID
 
-### Upload Your Application
+            // Specify device and os_version
+            caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G");  //Add the Device Details
+            caps.AddAdditionalCapability("platformVersion", "11");
+            caps.AddAdditionalCapability("platformName", "Android");
+            caps.AddAdditionalCapability("isRealMobile", true);
+            caps.AddAdditionalCapability("network", true);
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+            caps.AddAdditionalCapability("project", "CSharp Sample Android");
+            caps.AddAdditionalCapability("build", "CSharp Sample Android");
+            caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
-**Using App File:**
+            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
 
-**For Linux/macOS:**
+            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
 
-```js
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \
---form 'name="Android_App"' \
---form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
+            // Initialize the remote Webdriver using LambdaTest remote URL
+            // and desired capabilities defined above
+            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
+                new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
+
+            // Test case for the sample iOS app. 
+            // If you have uploaded your app, update the test case here.
+            IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
+            );
+            color.Click();
+            color.Click();
+
+            IOSElement text = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
+            );
+            text.Click();
+
+            IOSElement toast = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
+            );
+            toast.Click();
+
+            IOSElement nf = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
+            );
+            nf.Click();
+
+            driver.Quit();
+        }
+	}
+
 ```
 
-**For Windows:**
-
-```js
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""
-```
-
-**Using App URL:**
-
-**For Linux/macOS:**
-
-```js
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \
---form 'name="Android_App"' \
---form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'
-```
-
-**For Windows:**
-
-```js
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -d "{"url":"https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk","name":"sample.apk"}"
-```
-
-**Tip:**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
-- Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
-
-## Run Your First Test
-
-**Test Scenario:** Check out [Android.cs](https://github.com/LambdaTest/LT-appium-CSharp/blob/master/android/csharp-appium-android/Program.cs) file to view the sample test script for android and [iOS.cs](https://github.com/LambdaTest/LT-appium-CSharp/blob/master/ios/csharp-appium-ios/Program.cs) for iOS.
-
-### Configuring Your Test Capabilities
-
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
+## Executing The Tests
 
 <Tabs className="docs__val">
 
-<TabItem value="ios-config" label="iOS" default>
+<TabItem value="ios" label="iOS" default>
 
-```csharp title="iOS(.ipa)"
-  DesiredCapabilities capabilities = new DesiredCapabilities();
-	capabilities.setCapability("build", "your build name");
-	capabilities.setCapability("name", "your test name");
-	capabilities.setCapability("platformName", "iOS");
-	capabilities.setCapability("deviceName", "iPhone 13 Pro");
-	capabilities.setCapability("isRealMobile", true);
-	capabilities.setCapability("platformVersion","15.0");
-	capabilities.setCapability("Visual", true);
-	capabilities.setCapability("Console", true);
-	capabilities.setCapability("Network", true);
+If you are using an **iOS** app, the cURL command will generate an app URL for the corresponding iOS app and install the same for running the tests. You can either use our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) or upload your own app as discussed earlier.
 
-```
+Execute the following command to run your test on LambdaTest platform:
 
-</TabItem>
-<TabItem value="android-config" label="Android" default>
-
-```csharp title="Android(.apk)"
-  DesiredCapabilities capabilities = new DesiredCapabilities();
-	capabilities.setCapability("build", "your build name");
-	capabilities.setCapability("name", "your test name");
-	capabilities.setCapability("platformName", "Android");
-	capabilities.setCapability("deviceName", "Galaxy S20");
-	capabilities.setCapability("isRealMobile", true);
-	capabilities.setCapability("platformVersion","11");
-	capabilities.setCapability("Visual", true);
-	capabilities.setCapability("Console", true);
-	capabilities.setCapability("Network", true);
-
-}
+```bash
+node android.js
 ```
 
 </TabItem>
 
-</Tabs>
+<TabItem value="android" label="Android" default>
 
-**Info Note:**
-
-- You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/beta/index.html)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+If you are using an **android** app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or upload your own app as discussed earlier.
 
 ## Executing The Tests
 
 Click the **Play** icon to run the test.
 
-<p align="center">
-<img height="500" src="https://user-images.githubusercontent.com/95698164/170299931-6e807cc1-d8ff-42c6-bdd2-3b48603c4d03.png">
-</p>
+</TabItem>
 
-**Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
+</Tabs>
+
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Additional Links
 
@@ -181,9 +111,10 @@ Click the **Play** icon to run the test.
       
 Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
 
-* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp)
-* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp)
-* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp)    
+* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-python)
+* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-python)
+* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-python)
+* [LambdaTest Community](http://community.lambdatest.com/)    
 
 ## LambdaTest Community :busts_in_silhouette:
 
@@ -195,7 +126,7 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
+[LambdaTest](https://www.lambdatest.com) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
 
 ### Features
 
@@ -213,9 +144,8 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 * LT Browser - for responsive testing across 50+ pre-installed mobile, tablets, desktop, and laptop viewports
     
 [<img height="53" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
-
       
 ## We are here to help you :headphones:
 
 * Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-CSharp)
+* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-multipleApps)

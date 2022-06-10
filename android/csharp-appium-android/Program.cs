@@ -30,6 +30,10 @@ namespace csharp_appium
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
+            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
+
+            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
+
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
@@ -57,35 +61,6 @@ namespace csharp_appium
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
             );
             nf.Click();
-
-            IOSElement gl = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
-            );
-            gl.Click();
-
-            Thread.Sleep(5000);
-
-            driver.Navigate().Back();
-
-            IOSElement st = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
-            );
-            st.Click();
-
-            Thread.Sleep(5000);
-
-            driver.Navigate().Back();
-
-            IOSElement browser = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Browser"))
-            );
-            browser.Click();
-
-            IOSElement inputBox = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("url"))
-            );
-            inputBox.Click();
-
 
             driver.Quit();
         }
