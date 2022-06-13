@@ -30,10 +30,11 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("build", "CSharp iOS");
             caps.AddAdditionalCapability("name", "first_test");
 
-            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
+            
+            //ADD GEOLOCATION BASED ON COUNTRY CODE
+            caps.AddAdditionalCapability("geoLocation", "fr"); 
 
-            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
-
+            
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
 
