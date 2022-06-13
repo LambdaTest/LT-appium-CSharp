@@ -31,8 +31,8 @@ namespace csharp_appium
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
             
-            //ADD GEOLOCATION BASED ON COUNTRY CODE
-            caps.AddAdditionalCapability("geoLocation", "fr");   
+            //GRANT PERMISSIONS FOR ANDROID
+	        caps.AddAdditionalCapability("autoGrantPermissions", true);
             
             
             // Initialize the remote Webdriver using LambdaTest remote URL
