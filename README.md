@@ -1,11 +1,10 @@
-# How to install multiple apps in Real Devices on [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-multipleApps) using the Appium & C# Language
+# How to change IP geographic location in Real Devices on [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-geolocation) using the Appium & C#
 
-While performing app automation testing with appium on LambdaTest Grid, you might face a scenario where the APP1 that you are testing needs to interact with a few other applications APP2, APP3. In this scenario, LambdaTest offers an easy way out where you can just [upload your apps](https://www.lambdatest.com/support/docs/appium-java/#upload-your-application) & add them to the multiple apps array.
-It becomes extremely convenient now where you can just add those URLs & run your tests with ease. 
+While performing app automation testing with appium on LambdaTest Grid, you may face a scenario where you would like to simulate location of a specific country. You can easily do that by using the lambdatest capability "GeoLocation" and refer the 2-letter country code in the automation script. You can refer to sample test repo [here](https://github.com/LambdaTest/LT-appium-CSharp).
 
 # Steps:
 
-You can add the app URLs fetched by [uploading your apps](https://www.lambdatest.com/support/docs/appium-java/#upload-your-application) in the ```otherApps``` capability.
+The following is an example on how to set geoLocation in the capabilities.
 
 Below is the ```Android``` example shown:
 
@@ -33,9 +32,10 @@ class Program
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
-            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
 
-            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
+            //ADD GEOLOCATION BASED ON COUNTRY CODE
+            caps.AddAdditionalCapability("geoLocation", "fr");
+
 
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above
@@ -125,4 +125,4 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 ## We are here to help you :headphones:
 
 * Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-multipleApps)
+* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-geolocation)
