@@ -31,8 +31,11 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("name", "first_test");
 
             
-            //ADD GEOLOCATION BASED ON COUNTRY CODE
-            caps.AddAdditionalCapability("geoLocation", "fr"); 
+            //ACCEPT ALERTS FOR IOS
+	        caps.AddAdditionalCapability("autoDismissAlerts", true);
+
+	        //DISMISS ALERTS FOR IOS
+	        caps.AddAdditionalCapability("autoAcceptAlerts", true);
 
             
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
