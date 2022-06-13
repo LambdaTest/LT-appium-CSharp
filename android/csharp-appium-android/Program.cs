@@ -30,10 +30,11 @@ namespace csharp_appium
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
-            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
-
-            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
-
+            
+            //ADD GEOLOCATION BASED ON COUNTRY CODE
+            caps.AddAdditionalCapability("geoLocation", "fr");   
+            
+            
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
