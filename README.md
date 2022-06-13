@@ -1,12 +1,12 @@
-# How to change IP geographic location in Real Devices on [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-geolocation) using the Appium & C#
+# How to handle permission pop-ups in Real Devices on [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-permissions) using the Appium & C#
 
-While performing app automation testing with appium on LambdaTest Grid, you may face a scenario where you would like to simulate location of a specific country. You can easily do that by using the lambdatest capability "GeoLocation" and refer the 2-letter country code in the automation script. You can refer to sample test repo [here](https://github.com/LambdaTest/LT-appium-CSharp).
+While performing app automation testing with appium on LambdaTest Grid, you may face a scenario where you would like to automatically handle permission pop-ups. You may choose to either accept all permission pop-ups or dismiss all of them. You can handle the case as mentioned below separately for Android or iOS apps. You can refer to sample test repo [here](https://github.com/LambdaTest/LT-appium-CSharp).
 
 # Steps:
 
-The following is an example on how to set geoLocation in the capabilities.
+The following is an example on how to handle permissions in the capabilities in the automation script.
 
-Below is the ```Android``` example shown:
+Below is an example shown:
 
 ```
 class Program
@@ -33,8 +33,14 @@ class Program
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
 
-            //ADD GEOLOCATION BASED ON COUNTRY CODE
-            caps.AddAdditionalCapability("geoLocation", "fr");
+	    //GRANT PERMISSIONS FOR ANDROID
+	    caps.AddAdditionalCapability("autoGrantPermissions", true);
+
+	    //ACCEPT ALERTS FOR IOS
+	    caps.AddAdditionalCapability("autoDismissAlerts", true);
+
+	    //DISMISS ALERTS FOR IOS
+	    caps.AddAdditionalCapability("autoAcceptAlerts", true);
 
 
             // Initialize the remote Webdriver using LambdaTest remote URL
@@ -125,4 +131,4 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 ## We are here to help you :headphones:
 
 * Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-geolocation)
+* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-csharp-permissions)
