@@ -16,8 +16,9 @@ namespace csharp_appium
             caps.AddAdditionalCapability("LT_USERNAME", "LT_USERNAME");  //Add the LT Username
             caps.AddAdditionalCapability("LT_ACCESS_KEY", "LT_ACCESS_KEY");  //Add the LT Access key
 
-            // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "App_ID"); //Add the App ID
+            //Enter the Custom_ID here that was used to upload your application
+
+            caps.AddAdditionalCapability("app", "ENTER_CUSTOM_ID_HERE"); //Enter the app_url here
 
             // Specify device and os_version
             caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G");  //Add the Device Details
@@ -29,10 +30,6 @@ namespace csharp_appium
             caps.AddAdditionalCapability("project", "CSharp Sample Android");
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
             caps.AddAdditionalCapability("name", "CSharp Sample Android");
-
-            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
-
-            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
 
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above

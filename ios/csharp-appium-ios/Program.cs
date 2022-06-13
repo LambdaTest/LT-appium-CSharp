@@ -16,8 +16,9 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("LT_USERNAME", "Your_Username"); //Enter the Username here
             caps.AddAdditionalCapability("LT_ACCESSKEY", "Your_AccessKey");  //Enter the Access key here
 
-            // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "LT_App"); //Enter the App URL here.
+            //Enter the Custom_ID here that was used to upload your application
+
+            caps.AddAdditionalCapability("app", "ENTER_CUSTOM_ID_HERE"); //Enter the app_url here
 
             // Specify device and os_version
             caps.AddAdditionalCapability("deviceName", "iPhone 12"); //Change the device name here
@@ -29,10 +30,6 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("project", "First CSharp project");
             caps.AddAdditionalCapability("build", "CSharp iOS");
             caps.AddAdditionalCapability("name", "first_test");
-
-            // ADD THE APP URL OF OTHER APPS THAT YOU'D LIKE TO INSTALL ON THE SAME DEVICE
-
-            caps.AddAdditionalCapability("otherApps", "['App_1', 'App_2']");   //ENTER THE OTHER APP URLs HERE IN AN ARRAY FORMAT
 
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
