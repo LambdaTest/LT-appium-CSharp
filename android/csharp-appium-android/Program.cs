@@ -12,12 +12,12 @@ namespace csharp_appium
         static void Main(string[] args)
         {
             AppiumOptions caps = new AppiumOptions();
- 
-            caps.AddAdditionalCapability("LT_USERNAME", "LT_USERNAME");  //Add the LT Username
-            caps.AddAdditionalCapability("LT_ACCESS_KEY", "LT_ACCESS_KEY");  //Add the LT Access key
+
+            caps.AddAdditionalCapability("user", "YOUR_LT_USERNAME");  //Add the LT Username
+            caps.AddAdditionalCapability("accessKey", "YOUR_LT_ACCESS_KEY");  //Add the LT Access key
 
             // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "App_ID"); //Add the App ID
+            caps.AddAdditionalCapability("app", "APP_URL"); //Add the App ID
 
             // Specify device and os_version
             caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G");  //Add the Device Details

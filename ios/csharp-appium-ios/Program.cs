@@ -13,15 +13,15 @@ namespace csharp_appium_first
         {
             AppiumOptions caps = new AppiumOptions();
 
-            caps.AddAdditionalCapability("LT_USERNAME", "Your_Username"); //Enter the Username here
-            caps.AddAdditionalCapability("LT_ACCESSKEY", "Your_AccessKey");  //Enter the Access key here
+            caps.AddAdditionalCapability("user", "YOUR_LT_USERNAME"); //Enter the Username here
+            caps.AddAdditionalCapability("accessKey", "YOUR_LT_ACCESS_KEY");  //Enter the Access key here
 
             // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "LT_App"); //Enter the App URL here.
+            caps.AddAdditionalCapability("app", "APP_URL"); //Enter the App URL here.
 
             // Specify device and os_version
             caps.AddAdditionalCapability("deviceName", "iPhone 12"); //Change the device name here
-            caps.AddAdditionalCapability("platformVersion", "15"); 
+            caps.AddAdditionalCapability("platformVersion", "15");
             caps.AddAdditionalCapability("platformName", "iOS");
             caps.AddAdditionalCapability("isRealMobile", true);
             caps.AddAdditionalCapability("network", true);
