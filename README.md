@@ -165,9 +165,9 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Click the **Play** icon to run the test.
 
-<p align="center">
+<!-- <p align="center">
 <img height="500" src="https://user-images.githubusercontent.com/95698164/170299931-6e807cc1-d8ff-42c6-bdd2-3b48603c4d03.png">
-</p>
+</p> -->
 
 **Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
