@@ -38,7 +38,7 @@
 Before you can start performing App automation testing with Appium, you have to set up Visual Studio:
 
 <p align="center">
-<img height="500" src="https://user-images.githubusercontent.com/95698164/170299253-3166f596-3214-4c9f-88c4-885deb5966e7.png">
+<img height="500" src="https://user-images.githubusercontent.com/109070745/180050696-b40a7864-fb1d-4362-9c4a-16c213fac13c.png">
 </p>
 
 - Clone/Download the Github Repository.
@@ -54,15 +54,15 @@ Set LambdaTest `Username` and `Access Key` in environment variables.
 **For Linux/macOS:**
 
 ```js
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME" \
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
   
 **For Windows:**
 
 ```js
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME" `
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+set LT_USERNAME=YOUR_LAMBDATEST_USERNAME `
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 ### Upload Your Application
@@ -159,7 +159,7 @@ You can update your custom capabilities in test scripts. In this sample project,
 **Info Note:**
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/beta/index.html)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 ## Executing The Tests
 
