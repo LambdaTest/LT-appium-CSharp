@@ -38,7 +38,7 @@
 Before you can start performing App automation testing with Appium, you have to set up Visual Studio:
 
 <p align="center">
-<img height="500" src="https://user-images.githubusercontent.com/109070745/180050696-b40a7864-fb1d-4362-9c4a-16c213fac13c.png">
+<img height="500" src="https://user-images.githubusercontent.com/109070745/180055052-c0761088-eaa1-48f3-abac-521ca8c3458b.png">
 </p>
 
 - Clone/Download the Github Repository.
