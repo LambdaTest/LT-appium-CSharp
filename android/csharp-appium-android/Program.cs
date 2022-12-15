@@ -24,7 +24,7 @@ namespace csharp_appium
             caps.AddAdditionalCapability("platformVersion", "11");
             caps.AddAdditionalCapability("platformName", "Android");
             caps.AddAdditionalCapability("isRealMobile", true);
-            caps.AddAdditionalCapability("network", true);
+            caps.AddAdditionalCapability("network", false);
 
             caps.AddAdditionalCapability("project", "CSharp Sample Android");
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
