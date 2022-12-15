@@ -24,7 +24,7 @@ namespace csharp_appium_first
             caps.AddAdditionalCapability("platformVersion", "15");
             caps.AddAdditionalCapability("platformName", "iOS");
             caps.AddAdditionalCapability("isRealMobile", true);
-            caps.AddAdditionalCapability("network", true);
+            caps.AddAdditionalCapability("network", false);
 
             caps.AddAdditionalCapability("project", "First CSharp project");
             caps.AddAdditionalCapability("build", "CSharp iOS");
