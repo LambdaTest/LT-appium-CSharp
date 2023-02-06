@@ -34,7 +34,7 @@ namespace csharp_appium
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
-
+						driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
             // Test case for the sample iOS app. 
             // If you have uploaded your app, update the test case here.
             IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
