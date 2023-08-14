@@ -32,7 +32,7 @@ namespace csharp_appium_first
 
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
-
+            driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
             IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
             );
