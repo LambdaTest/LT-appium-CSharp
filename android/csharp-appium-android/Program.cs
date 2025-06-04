@@ -1,8 +1,10 @@
 ﻿using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Appium.iOS;
+using OpenQA.Selenium.Appium.Android;
 using System.Threading;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace csharp_appium
 
@@ -11,16 +13,26 @@ namespace csharp_appium
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Starting Android Test...");
+            
+            // Load configuration
+            var configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "config.json");
+            if (!File.Exists(configPath))
+            {
+                throw new FileNotFoundException("config.json not found. Please create it from config.template.json");
+            }
+            
+            var config = JObject.Parse(File.ReadAllText(configPath));
+            var ltConfig = config["lambdatest"];
+
             AppiumOptions caps = new AppiumOptions();
 
-            caps.AddAdditionalCapability("user", "YOUR_LT_USERNAME");  //Add the LT Username
-            caps.AddAdditionalCapability("accessKey", "YOUR_LT_ACCESS_KEY");  //Add the LT Access key
-
-            // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "APP_URL"); //Add the App ID
+            caps.AddAdditionalCapability("user", ltConfig["username"].ToString());
+            caps.AddAdditionalCapability("accessKey", ltConfig["accessKey"].ToString());
+            caps.AddAdditionalCapability("app", ltConfig["androidAppId"].ToString());
 
             // Specify device and os_version
-            caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G");  //Add the Device Details
+            caps.AddAdditionalCapability("deviceName", "Galaxy S20");
             caps.AddAdditionalCapability("platformVersion", "11");
             caps.AddAdditionalCapability("platformName", "Android");
             caps.AddAdditionalCapability("isRealMobile", true);
@@ -32,61 +44,78 @@ namespace csharp_appium
 
             // Initialize the remote Webdriver using LambdaTest remote URL
             // and desired capabilities defined above
-            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
+            AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
-						driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
-            // Test case for the sample iOS app. 
+
+            // Test case for the sample Android app. 
             // If you have uploaded your app, update the test case here.
-            IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking color button...");
+            AndroidElement color = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
             );
             color.Click();
             color.Click();
+            Console.WriteLine("✓ Color button test passed");
 
-            IOSElement text = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking text button...");
+            AndroidElement text = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
             );
             text.Click();
+            Console.WriteLine("✓ Text button test passed");
 
-            IOSElement toast = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking toast button...");
+            AndroidElement toast = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
             );
             toast.Click();
+            Console.WriteLine("✓ Toast button test passed");
 
-            IOSElement nf = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking notification button...");
+            AndroidElement nf = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
             );
             nf.Click();
+            Console.WriteLine("✓ Notification button test passed");
 
-            IOSElement gl = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking geolocation button...");
+            AndroidElement gl = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
             );
             gl.Click();
+            Console.WriteLine("✓ Geolocation button test passed");
 
-            Thread.Sleep(5000);
+            Console.WriteLine("Waiting for geolocation request to process...");
+            Thread.Sleep(10000); // Wait 10 seconds for geolocation request
 
             driver.Navigate().Back();
 
-            IOSElement st = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking speed test button...");
+            AndroidElement st = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
             );
             st.Click();
+            Console.WriteLine("✓ Speed test button test passed");
 
             Thread.Sleep(5000);
 
             driver.Navigate().Back();
 
-            IOSElement browser = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking browser button...");
+            AndroidElement browser = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Browser"))
             );
             browser.Click();
+            Console.WriteLine("✓ Browser button test passed");
 
-            IOSElement inputBox = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+            Console.WriteLine("Test: Clicking URL input box...");
+            AndroidElement inputBox = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("url"))
             );
             inputBox.Click();
+            Console.WriteLine("✓ URL input box test passed");
 
-
+            Console.WriteLine("All Android tests completed successfully!");
             driver.Quit();
         }
     }
