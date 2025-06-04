@@ -30,6 +30,7 @@
 ## Table of Contents
 
 * [Pre-requisites](#pre-requisites)
+* [Configuration Setup](#configuration-setup)
 * [Run Your First Test](#run-your-first-test)
 * [Executing The Tests](#executing-the-tests)
 
@@ -44,6 +45,33 @@ Before you can start performing App automation testing with Appium, you have to 
 - Clone/Download the Github Repository.
 
 - Open the Android/iOS project using the file with a .sln extension.
+
+## Configuration Setup
+
+The project uses a configuration file to manage sensitive information like LambdaTest credentials and app IDs. Follow these steps to set up your configuration:
+
+1. Locate the `config.template.json` file in the root directory
+2. Create a new file named `config.json` by copying the template:
+   ```bash
+   cp config.template.json config.json
+   ```
+3. Edit `config.json` and fill in your credentials:
+   ```json
+   {
+       "lambdatest": {
+           "username": "YOUR_LAMBDATEST_USERNAME",
+           "accessKey": "YOUR_LAMBDATEST_ACCESS_KEY",
+           "androidAppId": "YOUR_ANDROID_APP_ID",
+           "iosAppId": "YOUR_IOS_APP_ID"
+       }
+   }
+   ```
+
+⚠️ **Important Security Notes:**
+- The `config.json` file contains sensitive information and should NEVER be committed to version control
+- The file is already included in `.gitignore` to prevent accidental commits
+- Keep your credentials secure and do not share them publicly
+- If you accidentally commit credentials, rotate them immediately
 
 ### Setting Up Your Authentication
 
