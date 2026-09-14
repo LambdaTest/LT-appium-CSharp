@@ -13,18 +13,23 @@ namespace csharp_appium
         {
             AppiumOptions caps = new AppiumOptions();
 
-            caps.AddAdditionalCapability("user", "YOUR_LT_USERNAME");  //Add the LT Username
-            caps.AddAdditionalCapability("accessKey", "YOUR_LT_ACCESS_KEY");  //Add the LT Access key
+            // caps.AddAdditionalCapability("user", "YOUR_LT_USERNAME");  //Add the LT Username
+            // caps.AddAdditionalCapability("accessKey", "YOUR_LT_ACCESS_KEY");  //Add the LT Access key
+            caps.AddAdditionalCapability("user", Environment.GetEnvironmentVariable("LT_USERNAME"));
+            caps.AddAdditionalCapability("accessKey", Environment.GetEnvironmentVariable("LT_ACCESS_KEY"));
+
 
             // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "APP_URL"); //Add the App ID
+             caps.AddAdditionalCapability("app", "APP_URL"); //Add the App ID
 
             // Specify device and os_version
-            caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G");  //Add the Device Details
-            caps.AddAdditionalCapability("platformVersion", "11");
+            caps.AddAdditionalCapability("deviceName", "Galaxy S25");  //Add the Device Details
+            caps.AddAdditionalCapability("platformVersion", "15");
             caps.AddAdditionalCapability("platformName", "Android");
             caps.AddAdditionalCapability("isRealMobile", true);
             caps.AddAdditionalCapability("network", false);
+            caps.AddAdditionalCapability("autoGrantPermissions", true);
+            caps.AddAdditionalCapability("autoAcceptAlerts", true);
 
             caps.AddAdditionalCapability("project", "CSharp Sample Android");
             caps.AddAdditionalCapability("build", "CSharp Sample Android");
@@ -34,7 +39,7 @@ namespace csharp_appium
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
                 new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
-						driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
+                        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             // Test case for the sample iOS app. 
             // If you have uploaded your app, update the test case here.
             IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
