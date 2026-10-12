@@ -1,5 +1,7 @@
 # Run Appium Tests with C# on TestMu AI (Formerly LambdaTest)
 
+> End-to-End (E2E) testing of mobile apps using Appium and C#, run across real devices and operating systems on TestMu AI.
+
 <p align="center">
   <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
   <a href="https://www.nuget.org/packages/Appium.WebDriver/"><img src="https://img.shields.io/nuget/v/Appium.WebDriver.svg?style=for-the-badge&labelColor=000000" alt="Appium WebDriver version"></a>
