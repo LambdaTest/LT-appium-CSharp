@@ -1,0 +1,69 @@
+trigger:
+- master
+
+pr:
+- master
+
+# ---------- PARAMETERS ----------
+parameters:
+- name: platform
+  displayName: "Which project do you want to run?"
+  type: string
+  default: both
+  values:
+    - android
+    - ios
+    - both
+
+# ---------- SCHEDULE ----------
+schedules:
+- cron: "0 2 * * *"   # Daily 2 AM UTC
+  displayName: Nightly Mobile Tests
+  branches:
+    include:
+    - main
+  always: "true"
+
+# ---------- AGENT ----------
+pool:
+  vmImage: ubuntu-latest
+
+# ---------- VARIABLES ----------
+variables:
+- group: lambdatest-secrets
+
+# ---------- STEPS ----------
+steps:
+- task: UseDotNet@2
+  displayName: "Install .NET 8 SDK"
+  inputs:
+    packageType: sdk
+    version: '8.0.x'
+
+# ---------- ANDROID ----------
+- script: |
+    echo "Running Android Appium tests"
+    cd android/csharp-appium-android
+    dotnet restore
+    dotnet build --configuration Release
+    dotnet run --configuration Release
+  displayName: "Run Android Tests"
+  condition: |
+    or(
+      eq('${{ parameters.platform }}', 'android'),
+      eq('${{ parameters.platform }}', 'both')
+    )
+
+# ---------- iOS ----------
+- script: |
+    echo "Running iOS Appium tests"
+    cd ios/csharp-appium-ios
+    dotnet restore
+    dotnet build --configuration Release
+    dotnet run --configuration Release
+  displayName: "Run iOS Tests"
+  condition: |
+    or(
+      eq('${{ parameters.platform }}', 'ios'),
+      eq('${{ parameters.platform }}', 'both')
+    )

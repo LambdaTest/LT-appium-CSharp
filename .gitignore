@@ -1,3 +1,7 @@
+# =========================
+# Java / JVM
+# =========================
+
 # Compiled class file
 *.class
 
@@ -10,7 +14,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,5 +23,42 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# JVM crash logs
 hs_err_pid*
+
+
+# =========================
+# .NET / C# (Android & iOS)
+# =========================
+
+# Build output folders
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+packages/
+*.nupkg
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+
+# =========================
+# Visual Studio / IDEs
+# =========================
+
+.vs/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
